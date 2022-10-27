@@ -3,7 +3,7 @@
 class CreditCard {
 
     public $numero_carta;
-    public $data_scadenza;
+    public $data_scadenza; // 2027
     public $intestatario;
     public $CVV;
 
@@ -16,8 +16,11 @@ class CreditCard {
 
     public function isValid(){
         // check sulla data di scadenza
-        // if (data_scadenza >= AnnoCorrente)
-            return true;
+        $Year = date("Y");
+        if ( $this->data_scadenza >= $Year) 
+        return true;
+        else
+        return false;
     }
 }
 
