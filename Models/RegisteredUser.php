@@ -6,7 +6,6 @@ class RegisteredUser extends User {
     public $nome;
     public $cognome;
     public $password;
-
     private $sconto = 20;
 
     public function checkProducts(){
